@@ -1,4 +1,7 @@
-# Next.js App Router Playground
+# Next.js App Router Playground _On Cloudflare Pages ⚡_
+
+> Learn more about [Cloudflare Pages](https://pages.cloudflare.com/) and the
+> [Next.js App Router](https://nextjs.org/docs/app)
 
 Next.js recently introduced the App Router with support for:
 

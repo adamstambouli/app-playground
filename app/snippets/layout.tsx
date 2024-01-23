@@ -1,6 +1,9 @@
+export const runtime = 'edge';
+
 const title = 'Snippets';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,

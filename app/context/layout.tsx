@@ -5,9 +5,12 @@ import { CounterProvider } from 'app/context/counter-context';
 import React from 'react';
 import ContextClickCounter from './context-click-counter';
 
+export const runtime = 'edge';
+
 const title = 'Client Context';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,

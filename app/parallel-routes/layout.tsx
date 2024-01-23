@@ -1,6 +1,9 @@
+export const runtime = 'edge';
+
 const title = 'Parallel Routes';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,

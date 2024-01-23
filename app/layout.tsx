@@ -4,18 +4,21 @@ import Byline from '#/ui/byline';
 import { GlobalNav } from '#/ui/global-nav';
 import { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title: {
-    default: 'Next.js App Router',
-    template: '%s | Next.js App Router',
+    default: 'Next.js App Router on Cloudflare Pages',
+    template: '%s | Next.js App Router on Cloudflare Pages',
   },
   description:
     'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
   openGraph: {
-    title: 'Next.js App Router Playground',
+    title: 'Next.js App Router Playground on Cloudflare Pages',
     description:
       'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
-    images: [`/api/og?title=Next.js App Router`],
+    images: [`/api/og?title=Next.js App Router on Cloudflare Pages`],
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,6 +32,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="[color-scheme:dark]">
+      {process.env.NODE_ENV === 'production' ? (
+        <head>
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.CLOUDFLARE_ANALYTICS_TOKEN}"}`}
+          />
+        </head>
+      ) : null}
       <body className="bg-gray-1100 overflow-y-scroll bg-[url('/grid.svg')] pb-36">
         <GlobalNav />
 

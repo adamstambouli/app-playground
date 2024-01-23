@@ -2,9 +2,12 @@ import { Tab } from '#/ui/tab';
 import React from 'react';
 import { RandomPostTab } from './random-post-tab';
 
+export const runtime = 'edge';
+
 const title = 'Static Data';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,

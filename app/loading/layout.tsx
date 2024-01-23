@@ -4,9 +4,12 @@ import { TabGroup } from '#/ui/tab-group';
 import { notFound } from 'next/navigation';
 import React from 'react';
 
+export const runtime = 'edge';
+
 const title = 'Loading';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,

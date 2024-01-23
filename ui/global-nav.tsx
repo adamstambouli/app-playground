@@ -8,6 +8,7 @@ import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid';
 import clsx from 'clsx';
 import { useState } from 'react';
 import Byline from './byline';
+import { CloudflarePagesLogo } from './cloudflare-pages-logo';
 
 export function GlobalNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,20 +16,27 @@ export function GlobalNav() {
 
   return (
     <div className="fixed top-0 z-10 flex w-full flex-col border-b border-gray-800 bg-black lg:bottom-0 lg:z-auto lg:w-72 lg:border-b-0 lg:border-r lg:border-gray-800">
-      <div className="flex h-14 items-center px-4 py-4 lg:h-auto">
+      <div className="flex h-14 items-center space-x-2 px-4 py-4 lg:h-auto">
         <Link
           href="/"
-          className="group flex w-full items-center gap-x-2.5"
+          className="group flex items-center gap-x-2.5"
           onClick={close}
         >
           <div className="h-7 w-7 rounded-full border border-white/30 group-hover:border-white/50">
             <NextLogo />
           </div>
-
-          <h3 className="font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
+          <h3 className="whitespace-nowrap font-semibold tracking-wide text-gray-400 group-hover:text-gray-50">
             App Router
           </h3>
         </Link>
+        <span className="text-gray-500">on</span>
+        <a
+          className="w-20 items-center hover:opacity-80"
+          href="https://pages.cloudflare.com/"
+          target="_blank"
+        >
+          <CloudflarePagesLogo />
+        </a>
       </div>
       <button
         type="button"

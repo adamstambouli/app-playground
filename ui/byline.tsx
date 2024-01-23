@@ -14,24 +14,25 @@ export default function Byline({ className }: { className: string }) {
             </div>
           </a>
         </div>
+        <div className="flex items-center gap-x-1.5">
+          <div className="text-sm text-gray-400">Adapted by</div>
+          <a
+            className="text-md flex h-5 items-center font-semibold text-gray-100 hover:text-gray-50"
+            href="https://adm.st/?ref=app-playground-on-cloudflare-pages"
+            target="_blank"
+          >
+            Adam
+          </a>
+        </div>
 
         <div className="text-sm text-gray-400">
           <a
             className="underline decoration-dotted underline-offset-4 transition-colors hover:text-gray-300"
-            href="https://github.com/vercel/app-playground"
+            href="https://github.com/adamstambouli/app-playground"
             target="_blank"
             rel="noreferrer"
           >
             View code
-          </a>
-          {' or '}
-          <a
-            className="underline decoration-dotted underline-offset-4 transition-colors hover:text-gray-300"
-            href="https://vercel.com/templates/next.js/app-directory"
-            target="_blank"
-            rel="noreferrer"
-          >
-            deploy your own
           </a>
         </div>
       </div>

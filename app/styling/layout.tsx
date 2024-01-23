@@ -1,9 +1,12 @@
 import { TabGroup } from '#/ui/tab-group';
 import React from 'react';
 
+export const runtime = 'edge';
+
 const title = 'Styling';
 
 export const metadata = {
+  metadataBase: new URL('https://app-playground-on.pages.dev'),
   title,
   openGraph: {
     title,
